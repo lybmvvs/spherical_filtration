@@ -102,4 +102,3 @@ class Ui_sphere_filtration(object):
         self.pushButton_2.setText(_translate("sphere_filtration", "ВЫПОЛНИТЬ РАСЧЕТ "))
         self.pushButton_3.setText(_translate("sphere_filtration", "Экспортировать"))
         self.label_3.setText(_translate("sphere_filtration", "Моделирование движения жидкости к скважинам различной конфигурации при помощи сферического потока"))
-import source_rc
