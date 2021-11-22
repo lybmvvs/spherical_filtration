@@ -15,6 +15,15 @@ ui.setupUi(sphere_filtration)
 sphere_filtration.show()
 
 
+class Inpxlsx():
+
+    def im_file(self):
+
+        name = ui.textEdit.text()
+        #final_data = pd.read_excel(file_name)
+        print(name)
+
+    ui.pushButton.clicked.connect(im_file)
 
 
 sys.exit(app.exec_())

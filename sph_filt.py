@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'sphere_filt.ui'
+# Form implementation generated from reading ui file 'sph_filt.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -64,9 +64,9 @@ class Ui_sphere_filtration(object):
         self.label_2.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label_2.setObjectName("label_2")
         self.verticalLayout.addWidget(self.label_2)
-        self.textEdit = QtWidgets.QTextEdit(self.verticalLayoutWidget)
-        self.textEdit.setObjectName("textEdit")
-        self.verticalLayout.addWidget(self.textEdit)
+        self.lineEdit = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.lineEdit.setObjectName("lineEdit")
+        self.verticalLayout.addWidget(self.lineEdit)
         self.pushButton = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.pushButton.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.pushButton.setObjectName("pushButton")
@@ -80,9 +80,9 @@ class Ui_sphere_filtration(object):
         self.pushButton_2 = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout_2.addWidget(self.pushButton_2)
-        self.textEdit_2 = QtWidgets.QTextEdit(self.verticalLayoutWidget_2)
-        self.textEdit_2.setObjectName("textEdit_2")
-        self.verticalLayout_2.addWidget(self.textEdit_2)
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.verticalLayout_2.addWidget(self.lineEdit_2)
         self.pushButton_3 = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
         self.pushButton_3.setObjectName("pushButton_3")
         self.verticalLayout_2.addWidget(self.pushButton_3)

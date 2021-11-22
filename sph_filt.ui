@@ -90,7 +90,7 @@ font-size: 14px;
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QLineEdit" name="lineEdit"/>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton">
@@ -122,7 +122,7 @@ font-size: 14px;
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="textEdit_2"/>
+     <widget class="QLineEdit" name="lineEdit_2"/>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton_3">
@@ -150,8 +150,6 @@ font-size: 14px;
    </property>
   </widget>
  </widget>
- <resources>
-  <include location="source.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
