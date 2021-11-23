@@ -7,7 +7,7 @@
 * Сopy your **.xlsx** file to appropriate folder
 where the **.exe** file locates. In sended archive there is a test-file with the number of
 wells and data called *list_wells_test.xlsx*
-* When you started to uce **.exe** file print the **name** of your **.xlsx** file in input 
+* When you started to use **.exe** file print the **name** of your **.xlsx** file in input 
 empty field like *list_wells_test.xlsx* and press the *Импортировать* button.
 * File is ready for processing. Now you can press the *ВЫПОЛНИТЬ РАСЧЕТ* button. In the following
 empty field the total **oil rate (surface conditions), m^3/day** will appear.
