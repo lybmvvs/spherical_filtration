@@ -665,17 +665,14 @@ class Inpxlsx():
         for i in Rate:
             Oil_rate.append(-i)
 
-        final_data['Oil rate, t/day'] = [167.91351496109357, 241.86299809490293, 217.2441969465097, 133.42004742990946,
-                                         158.51940937434907, 110.70863907026458, 183.00195030970977, 214.3834091150673,
-                                         191.0237151250494, 112.48085445368017, 175.22210008367935, 198.69719879498402,
-                                         173.6991032546025, 162.34668917424725, 141.34836675412106, 220.9532893264759]
+        final_data['Oil rate, m^3/day'] = Oil_rate
         final_data = final_data.drop(['Alpha_i_k', 'Alpha_i_m', 'Flow capacity', 'Constant term', 'alpha/alpha'],
                                      axis=1)
-        final_data['Oil rate (surface), t/day'] = final_data.apply(
+        final_data['Oil rate (surface), m^3/day'] = final_data.apply(
             lambda x:
-            x['Oil rate, t/day'] / x['Fvf, m3/m3']
+            x['Oil rate, m^3/day'] / x['Fvf, m3/m3']
             , axis=1)
-        prod = final_data['Oil rate (surface), t/day'].tolist()
+        prod = final_data['Oil rate (surface), m^3/day'].tolist()
         sum = 0
         for i in prod:
             sum += i
