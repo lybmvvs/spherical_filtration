@@ -685,7 +685,7 @@ class Inpxlsx():
     def exp_file(self):
         global final_data
 
-        final_data.to_excel('solution.xlsx')
+        final_data.to_excel('solution.xlsx',index=False)
 
     ui.pushButton_3.clicked.connect(exp_file)
 
