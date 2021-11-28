@@ -3,6 +3,7 @@ import datetime
 import pandas as pd
 import numpy as np
 import math
+import matplotlib.pyplot as plt
 from PyQt5 import QtWidgets
 from sph_filt import Ui_sphere_filtration
 
@@ -684,7 +685,12 @@ class Inpxlsx():
 
     def exp_file(self):
         global final_data
-
+        unit_number = final_data['Well'].tolist()
+        oil_rate = final_data['Oil rate (surface), m^3/day'].tolist()
+        fig,ax=plt.subplots()
+        ax.scatter(unit_number, oil_rate, color='red', label="oil rate/unit")
+        plt.legend()
+        plt.show()
         final_data.to_excel('solution.xlsx',index=False)
 
     ui.pushButton_3.clicked.connect(exp_file)
