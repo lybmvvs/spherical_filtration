@@ -664,7 +664,7 @@ class Inpxlsx():
         Rate = X.tolist()
         Oil_rate = []
         for i in Rate:
-            Oil_rate.append(-i)
+            Oil_rate.append(-i/2)
 
         final_data['Oil rate, m^3/day'] = Oil_rate
         final_data = final_data.drop(['Alpha_i_k', 'Alpha_i_m', 'Flow capacity', 'Constant term', 'alpha/alpha'],
@@ -687,8 +687,11 @@ class Inpxlsx():
         global final_data
         unit_number = final_data['Well'].tolist()
         oil_rate = final_data['Oil rate (surface), m^3/day'].tolist()
+        oil_rate_value = final_data['Oil rate (surface), m^3/day'].tolist()
         fig,ax=plt.subplots()
         ax.scatter(unit_number, oil_rate, color='red', label="oil rate/unit")
+        for i, txt in enumerate(oil_rate_value):
+            ax.annotate(txt, (unit_number[i], oil_rate[i]))
         plt.legend()
         plt.show()
         final_data.to_excel('solution.xlsx',index=False)
@@ -697,3 +700,4 @@ class Inpxlsx():
 
 
 sys.exit(app.exec_())
+
