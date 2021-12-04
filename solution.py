@@ -674,14 +674,74 @@ class Inpxlsx():
             x['Oil rate, m^3/day'] / x['Fvf, m3/m3']
             , axis=1)
         prod = final_data['Oil rate (surface), m^3/day'].tolist()
-        sum = 0
+        summa = 0
         for i in prod:
-            sum += i
-        ui.lineEdit_2.setText(str(sum))
+            summa += i
+        ui.lineEdit_2.setText(str(summa))
         print('success')
+
+    #def pressure_map(self):
+        #x = np.array([0, 10, 20, 30, 40, 50, 60, 70, 80,
+        #              90, 100])
+
+        #y = np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+        # отобразим получившиеся точки на графике
+        #fig, ax = plt.subplots()
+        #ax.scatter(x, y)
+        #ax.set_title('узлы')
+
+        # определяем размер и радиус сетки (h)
+        #grid_size = 1
+        #h = 10
+        # получение min, max для x и y
+        #x_min = min(x)
+        #x_max = max(x)
+        #y_min = min(y)
+        #y_max = max(y)
+        # строим сетку
+        #x_grid = np.arange(x_min - h, x_max + h, grid_size)
+        #y_grid = np.arange(y_min - h, y_max + h, grid_size)
+        #x_mesh, y_mesh = np.meshgrid(x_grid, y_grid)
+        # центральная точка для каждого квадрата сетки
+        #xc = x_mesh + (grid_size / 2)
+        #yc = y_mesh + (grid_size / 2)
+
+        # функция для расчета плотности точек
+        #def kde_quartic(d, h):
+        #    dn = d / h
+        #    P = (15 / 16) * (1 - dn ** 2) ** 2
+        #    return P
+
+        #intensity_list = []
+        #for j in range(len(xc)):
+        #    intensity_row = []
+        #    for k in range(len(xc[0])):
+        #        kde_value_list = []
+        #        for i in range(len(x)):
+                    # рассчитываем расстояние
+        #            d = math.sqrt((xc[j][k] - x[i]) ** 2 + (yc[j][k] - y[i]) ** 2)
+        #            if d <= h:
+        #                p = kde_quartic(d, h)
+        #            else:
+        #                p = 0
+        #            kde_value_list.append(p)
+                # суммируем все значения плотности
+        #        p_total = sum(kde_value_list)
+        #        intensity_row.append(p_total)
+        #    intensity_list.append(intensity_row)
+        # визуализация тепловой карты
+        #intensity = np.array(intensity_list)
+        #plt.pcolormesh(x_mesh, y_mesh, intensity)
+        #plt.plot(x, y, 'ro')
+        #plt.colorbar()
+
+        #plt.show()
+
+
 
 
     ui.pushButton_2.clicked.connect(red_file)
+    #ui.pushButton_2.clicked.connect(pressure_map)
 
     def exp_file(self):
         global final_data
@@ -696,7 +756,12 @@ class Inpxlsx():
         plt.show()
         final_data.to_excel('solution.xlsx',index=False)
 
+
+
+
+
     ui.pushButton_3.clicked.connect(exp_file)
+
 
 
 sys.exit(app.exec_())
